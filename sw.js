@@ -24,9 +24,9 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/11/17/C-Stili-Dizilerden-std-array-e/');
-
   precacheUrls.push('/2020/05/21/Github-Pages-Uzerine-Hexo-Kurulumu/');
+
+  precacheUrls.push('/2019/11/17/C-Stili-Dizilerden-std-array-e/');
 
   precacheUrls.push('/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/');
 
