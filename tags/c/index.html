@@ -8,7 +8,7 @@
 <meta name="msapplication-TileImage" content="https://mguludag.github.io/images/applogo.png">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta charset="utf-8">
-<title>Tag: C++ - Blog about programming and more</title>
+<title>Tag: c - Blog about programming and more</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -26,7 +26,7 @@
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="Blog about programming and more">
-<meta property="og:url" content="https://mguludag.github.io/tags/C/index.html">
+<meta property="og:url" content="https://mguludag.github.io/tags/c/index.html">
 <meta property="og:site_name" content="Blog about programming and more">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Muhammed Galib Uludag">
@@ -156,7 +156,7 @@
     <section class="section section-heading">
     <div class="container">
         <div class="content">
-            <h5>#C++</h5>
+            <h5>#c</h5>
         </div>
     </div>
 </section>
@@ -166,12 +166,12 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="../../2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/" itemprop="url">OpenCV DNN ile Daha Iyi Kenar Belirleme</a>
+            <a href="../../2019/11/17/C-Stili-Dizilerden-std-array-e/" itemprop="url">C Stili Dizilerden std::array&#39;e...</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
-            <time datetime="2020-05-11T22:26:48.000Z" itemprop="datePublished">May 12 2020</time>
+            <time datetime="2019-11-17T20:08:36.000Z" itemprop="datePublished">Nov 17 2019</time>
         </span>
         
         <span class="column is-narrow article-category">
@@ -183,20 +183,21 @@
         <span class="column is-narrow">
             
             
-            10 minutes read (About 1455 words)
+            5 minutes read (About 817 words)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 4.1.1"></head><body><p>OpenCV ile kenar belirleme i&#xE7;in &#xE7;o&#x11F;unlukla <strong>Canny</strong> kenar belirleme y&#xF6;ntemi tercih ediliyor. Canny y&#xF6;nteminin yetersiz kald&#x131;&#x11F;&#x131; durumlarda art&#x131;k <strong>dnn</strong> ile daha ger&#xE7;ek&#xE7;i kenar belirleme sonucu g&#xF6;rece&#x11F;iz.</p><script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1590142617004')
+        <html><head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 4.1.1"></head><body><p>Programlama dillerinde diziler uygulan&#x131;rken syntax olarak genelde C stili dizilerden ilham ald&#x131;lar. &#xD6;zellik olarak C stili dizilerin &#xFC;zerine ihtiyaca g&#xF6;re &#xFC;ye fonksiyonlar da eklendi.</p>
+<p>C++11 ile gelen <code>std::array</code> ile C stili dizilerden &#xE7;ok daha fazla kullan&#x131;&#x15F;l&#x131;l&#x131;&#x11F;a ve okunabilirli&#x11F;e sahip kod yaz&#x131;l&#x131;rken performans anlam&#x131;nda ise neredeyse ayn&#x131; seviyede say&#x131;l&#x131;r.</p><script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1590143342766')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
 </script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script></body></html>
         <p class="article-more-link">
-            <a href="../../2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/#more">Read More</a>
+            <a href="../../2019/11/17/C-Stili-Dizilerden-std-array-e/#more">Read More</a>
         </p>
     
     </div>
@@ -409,16 +410,6 @@
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '../../content.json',
-        };
-        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-    })(window);
-</script>
-
-<script src="../../js/insight.js"></script>
-
-    
-</body>
-</html>tent.json',
         };
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
