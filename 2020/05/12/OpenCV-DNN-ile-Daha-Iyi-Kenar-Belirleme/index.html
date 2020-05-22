@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://mguludag.github.io/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/OpenCV_hed_example_screenshot_11.05.2020.png">
 <meta property="og:image" content="https://mguludag.github.io/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/OpenCV_hed_example_screenshot_11.05.2020-1.png">
 <meta property="article:published_time" content="2020-05-11T22:26:48.000Z">
-<meta property="article:modified_time" content="2020-05-21T15:33:59.757Z">
+<meta property="article:modified_time" content="2020-05-22T01:30:00.297Z">
 <meta property="article:author" content="Muhammed Galib Uludag">
 <meta property="article:tag" content="OpenCV">
 <meta property="article:tag" content="C++">
@@ -208,7 +208,7 @@
 <p>Canny algoritmas&#x131; John F. Canny taraf&#x131;ndan 1986&#x2019;da geli&#x15F;tirildi. 4 a&#x15F;amal&#x131; bir algoritmad&#x131;r.  </p>
 <ul>
 <li><strong>Noise removal:</strong> Resimdeki istenmeyen g&#xFC;r&#xFC;lt&#xFC;y&#xFC; <em>Gaussian Filter</em> ile azaltarak Canny algoritmas&#x131;n&#x131;n kenar olarak alg&#x131;lamas&#x131; engellenir.  </li>
-<li><strong>Gradient Calculation:</strong> Her piksel i&#xE7;in <em>Sobel, Prewitt ya da Robert</em> operat&#xF6;rleriyle gradyan (g&#xF6;r&#xFC;nt&#xFC; yo&#x11F;unluk derecesi) hesaplan&#x131;r.<br>$$Edge\ Graident\ (G) = { \sqrt{G_{x}^{2} + G_{y}^{2}} }\ \ Angle\ (\theta) = { \tan^{-1}(\frac{G_{y}}{G_{x}}) }$$</li>
+<li><strong>Gradient Calculation:</strong> Her piksel i&#xE7;in <em>Sobel, Prewitt ya da Robert</em> operat&#xF6;rleriyle gradyan (g&#xF6;r&#xFC;nt&#xFC; yo&#x11F;unluk derecesi) hesaplan&#x131;r.<br>$$Edge\ Graident\ (G) = { \sqrt{G_{x}^{2} + G_{y}^{2}} }$$<br>$$Angle\ (\theta) = { \tan^{-1}(\frac{G_{y}}{G_{x}}) }$$</li>
 <li><strong>Non-Maximal Suppression:</strong> Kenarlarda olmayan pikseller kald&#x131;r&#x131;l&#x131;r. En y&#xFC;ksek gradyan de&#x11F;eri olan pikseller kenar olarak kabul edilir. Ger&#xE7;ekte gradyan hesab&#x131; tek pikselde de&#x11F;ilde kom&#x15F;u piksellerle birlikte yap&#x131;l&#x131;r.  </li>
 <li><strong>Hysteresis Thresholding:</strong> Min ve Max threshold de&#x11F;erine bak&#x131;larak eldeki piksellerin kenar m&#x131; de&#x11F;il mi oldu&#x11F;una dair son karar verilir. Gradyan de&#x11F;eri Max de&#x11F;erden y&#xFC;ksekse kenar kabul edilir, Min de&#x11F;erden d&#xFC;&#x15F;&#xFC;kse kenar kabul edilmez. Max ile Min aras&#x131;nda kal&#x131;yorsa ba&#x11F;lant&#x131;l&#x131; oldu&#x11F;u kenar var m&#x131; diye bak&#x131;l&#x131;r e&#x11F;er varsa kenar olarak kabul edilir.<br>Bu a&#x15F;amalardan sonra Canny y&#xF6;ntemi bitmi&#x15F; ve kenar belirlenmi&#x15F; olur.  </li>
 </ul>
@@ -228,7 +228,7 @@
 <li><a href="https://www.pyimagesearch.com/2019/03/04/holistically-nested-edge-detection-with-opencv-and-deep-learning/" target="_blank" rel="noopener">Holistically-Nested Edge Detection with OpenCV and Deep Learning</a></li>
 </ul>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1590109648838')
+  navigator.serviceWorker.register('/sw.js?t=1590111017664')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
