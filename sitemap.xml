@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mguludag.github.io/categories/index.html</loc>
+    
+    <lastmod>2020-05-22T23:44:18.897Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mguludag.github.io/2020/05/22/Github-Pages-Hexo-ile-PWA-ve-Daha-Fazlasi/</loc>
     
     <lastmod>2020-05-22T23:42:44.313Z</lastmod>
