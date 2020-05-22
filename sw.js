@@ -30,6 +30,8 @@ var precacheUrls = [];
 
   precacheUrls.push('/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/');
 
+  precacheUrls.push('/2020/05/22/Github-Pages-Hexo-ile-PWA-ve-Daha-Fazlasi/');
+
   precacheUrls.push('/2020/03/09/cisco_router_routing/');
 
 toolbox.precache(precacheUrls);
