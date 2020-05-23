@@ -25,26 +25,18 @@
 
 
     <meta name="description" content="OpenCV ile kenar belirleme i&amp;#xE7;in &amp;#xE7;o&amp;#x11F;unlukla Canny kenar belirleme y&amp;#xF6;ntemi tercih ediliyor. Canny y&amp;#xF6;nteminin yetersiz kald&amp;#x131;&amp;#x11F;&amp;#x131; durumlarda art&amp;#x131;k dnn ile d">
+<meta name="keywords" content="cpp,opencv,edge,detection,canny,dnn,deep learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenCV DNN ile Daha Iyi Kenar Belirleme">
 <meta property="og:url" content="https://mguludag.github.io/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/index.html">
 <meta property="og:site_name" content="C++ Qt and OpenCV Articles">
 <meta property="og:description" content="OpenCV ile kenar belirleme i&amp;#xE7;in &amp;#xE7;o&amp;#x11F;unlukla Canny kenar belirleme y&amp;#xF6;ntemi tercih ediliyor. Canny y&amp;#xF6;nteminin yetersiz kald&amp;#x131;&amp;#x11F;&amp;#x131; durumlarda art&amp;#x131;k dnn ile d">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="https://mguludag.github.io/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/Network-Architecture-Holistically-nested-Edge-detection.webp">
 <meta property="og:image" content="https://mguludag.github.io/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/Edge_detection_comparison-300x280.webp">
 <meta property="og:image" content="https://mguludag.github.io/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/OpenCV_hed_example_screenshot_11.05.2020.png">
 <meta property="og:image" content="https://mguludag.github.io/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/OpenCV_hed_example_screenshot_11.05.2020-1.png">
-<meta property="article:published_time" content="2020-05-11T22:26:48.000Z">
-<meta property="article:modified_time" content="2020-05-22T18:57:48.617Z">
-<meta property="article:author" content="Muhammed Galib Uludag">
-<meta property="article:tag" content="cpp">
-<meta property="article:tag" content="opencv">
-<meta property="article:tag" content="edge">
-<meta property="article:tag" content="detection">
-<meta property="article:tag" content="canny">
-<meta property="article:tag" content="dnn">
-<meta property="article:tag" content="deep learning">
+<meta property="og:updated_time" content="2020-05-22T18:57:48.617Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://mguludag.github.io/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/Network-Architecture-Holistically-nested-Edge-detection.webp">
 <meta name="twitter:creator" content="@mguludag">
@@ -71,9 +63,7 @@
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
 
-
 <link rel="stylesheet" href="../../../../css/style.css">
-
 
 <script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
@@ -139,7 +129,7 @@
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="Search" href="javascript:;">
+            <a class="navbar-item search" title="Search" href="javascript:;" target="_blank" rel="noopener">
                 <i class="fas fa-search"></i>
             </a>
             
@@ -196,7 +186,7 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head><link rel=manifest href=/manifest.json><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><meta name="generator" content="Hexo 4.1.1"></head><body><p>OpenCV ile kenar belirleme i&#xE7;in &#xE7;o&#x11F;unlukla <strong>Canny</strong> kenar belirleme y&#xF6;ntemi tercih ediliyor. Canny y&#xF6;nteminin yetersiz kald&#x131;&#x11F;&#x131; durumlarda art&#x131;k <strong>dnn</strong> ile daha ger&#xE7;ek&#xE7;i kenar belirleme sonucu g&#xF6;rece&#x11F;iz.</p>
+        <html><head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 4.0.0"></head><body><p>OpenCV ile kenar belirleme i&#xE7;in &#xE7;o&#x11F;unlukla <strong>Canny</strong> kenar belirleme y&#xF6;ntemi tercih ediliyor. Canny y&#xF6;nteminin yetersiz kald&#x131;&#x11F;&#x131; durumlarda art&#x131;k <strong>dnn</strong> ile daha ger&#xE7;ek&#xE7;i kenar belirleme sonucu g&#xF6;rece&#x11F;iz.</p>
 <a id="more"></a>
 
 <p>Canny algoritmas&#x131; John F. Canny taraf&#x131;ndan 1986&#x2019;da geli&#x15F;tirildi. 4 a&#x15F;amal&#x131; bir algoritmad&#x131;r.  </p>
@@ -222,7 +212,7 @@
 <li><a href="https://www.pyimagesearch.com/2019/03/04/holistically-nested-edge-detection-with-opencv-and-deep-learning/" target="_blank" rel="noopener">Holistically-Nested Edge Detection with OpenCV and Deep Learning</a></li>
 </ul>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1590195237219')
+  navigator.serviceWorker.register('/sw.js?t=1590199501691')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
@@ -295,7 +285,7 @@
 
 <div id="disqus_thread">
     
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 </div>
 
@@ -471,9 +461,7 @@
     
 
 
-
 <script src="../../../../js/script.js"></script>
-
 
     
     <div class="searchbox ins-search">
@@ -503,9 +491,7 @@
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-
 <script src="../../../../js/insight.js"></script>
-
     
 </body>
 </html>
