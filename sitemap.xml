@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mguludag.github.io/categories/programming/index.html</loc>
+    
+    <lastmod>2020-05-23T00:04:53.252Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mguludag.github.io/categories/technology/index.html</loc>
     
     <lastmod>2020-05-23T00:00:06.306Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://mguludag.github.io/categories/programming/cpp/index.html</loc>
     
     <lastmod>2020-05-22T23:57:50.365Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mguludag.github.io/categories/programming/index.html</loc>
-    
-    <lastmod>2020-05-22T23:57:44.324Z</lastmod>
     
   </url>
   
