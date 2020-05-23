@@ -4,11 +4,11 @@ button,
 input,
 select,
 textarea {
-  font-family: "Cormorant", "Playfair Display", "Georgia", "Cambria", "Ovo", "STZhongsong", "Microsoft YaHei", serif; }
+  font-family: "Georgia", "Cambria", "Ovo", "STZhongsong", "Microsoft YaHei", serif; }
 
 a.tag.article-tag {
   font-size: 0.9rem;
-  text-decoration: none; }
+  text-decoration-thickness: auto; }
 
 @media screen and (min-width: 1024px) {
   .container {
