@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top">
-<head><link rel=manifest href=/manifest.json>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel=manifest href=/manifest.json>
+<head>
+    <link rel=manifest href=/manifest.json>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="blog mguludag">
@@ -54,7 +54,7 @@
 
 <link rel="stylesheet" href="../../../css/style.css">
 
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 
     
@@ -74,7 +74,7 @@
 </head>
 <body>
     
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item navbar-logo" href="../../../index.html">
@@ -147,26 +147,65 @@
     </div>
 </nav>
 
-    <section class="section">
+    <section class="section section-heading">
+    <div class="container">
+        <div class="content">
+            <h5><i class="far fa-folder"></i>OpenCV</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
     <div class="container">
     
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="../../../2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/" itemprop="url">OpenCV DNN ile Daha Iyi Kenar Belirleme</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2020-05-11T22:26:48.000Z" itemprop="datePublished">May 12 2020</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="../">Programming</a><span>></span><a class="article-category-link" href="">OpenCV</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            10 minutes read (About 1455 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <div class="archive content">
-            <h4 class="title is-4" id="2020">2020</h4>
-            <div class="articles">
-            
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2020-05-11T22:26:48.000Z" itemprop="datePublished">
-                        May 12</time>
-                    <h6 class="title is-6"><a href="../../../2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/">OpenCV DNN ile Daha Iyi Kenar Belirleme</a></h6>
-                </div>
-            
-            </div>
-        </div>
+        <html><head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 4.0.0"></head><body><p>OpenCV ile kenar belirleme i&#xE7;in &#xE7;o&#x11F;unlukla <strong>Canny</strong> kenar belirleme y&#xF6;ntemi tercih ediliyor. Canny y&#xF6;nteminin yetersiz kald&#x131;&#x11F;&#x131; durumlarda art&#x131;k <strong>dnn</strong> ile daha ger&#xE7;ek&#xE7;i kenar belirleme sonucu g&#xF6;rece&#x11F;iz.</p><script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1590201242953')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script></body></html>
+        <p class="article-more-link">
+            <a href="../../../2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/#more">Read More</a>
+        </p>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
     
     
     </div>
 </section>
+
     <footer class="footer">
     <div class="container">
         <div class="columns content">
@@ -369,27 +408,5 @@
 </script>
 <script src="../../../js/insight.js"></script>
     
-<script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1590200869705')
-    .then(function () {console.log('ServiceWorker Register Successfully.')})
-    .catch(function (e) {console.error(e)});
-}
-</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end --><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script></body>
+</body>
 </html>
