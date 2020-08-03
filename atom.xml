@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>C++ Qt and OpenCV Articles</title>
+  <icon>https://mguludag.github.io/icon.png</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://mguludag.github.io/"/>
+  <updated>2020-07-16T20:33:42.748Z</updated>
+  <id>https://mguludag.github.io/</id>
+  
+  <author>
+    <name>Muhammed Galib Uludag</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++ STL std::vector&#39;e Bakış</title>
+    <link href="https://mguludag.github.io/2020/07/16/cpp-vector-e-bakis/"/>
+    <id>https://mguludag.github.io/2020/07/16/cpp-vector-e-bakis/</id>
+    <published>2020-07-16T13:27:06.000Z</published>
+    <updated>2020-07-16T20:33:42.748Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Vekt&amp;#xF6;rler, eklenen ya da &amp;#xE7;&amp;#x131;kar&amp;#x131;lan elemanlara g&amp;#xF6;re boyutu dinamik olarak de&amp;#x11F;i&amp;#x15F;en bir dinamik dizidir. Biti&amp;#x15F;ik dizi formunda oldu&amp;#x11F;undan elemanlara eri&amp;#x15F;im olduk&amp;#xE7;a h&amp;#x131;zl&amp;#x131;d&amp;#x131;r. Yeni eleman ekleme ve eleman silme durumunda ise bellekte yeni alan ayr&amp;#x131;r&amp;#x131;p elemanlar&amp;#x131; oraya ta&amp;#x15F;&amp;#x131;yarak i&amp;#x15F;lem yapar. Bu y&amp;#xFC;zden ekleme ve silme i&amp;#x15F;lemleri eri&amp;#x15F;im i&amp;#x15F;lemleri kadar h&amp;#x131;zl&amp;#x131; de&amp;#x11F;ildir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://mguludag.github.io/categories/Programming/"/>
+    
+      <category term="CPP" scheme="https://mguludag.github.io/categories/Programming/CPP/"/>
+    
+    
+      <category term="programlama" scheme="https://mguludag.github.io/tags/programlama/"/>
+    
+      <category term="c++" scheme="https://mguludag.github.io/tags/c/"/>
+    
+      <category term="cpp" scheme="https://mguludag.github.io/tags/cpp/"/>
+    
+      <category term="c" scheme="https://mguludag.github.io/tags/c/"/>
+    
+      <category term="vector" scheme="https://mguludag.github.io/tags/vector/"/>
+    
+      <category term="std::vector" scheme="https://mguludag.github.io/tags/std-vector/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github Pages Hexo ile PWA ve Daha Fazlası</title>
+    <link href="https://mguludag.github.io/2020/05/22/Github-Pages-Hexo-ile-PWA-ve-Daha-Fazlasi/"/>
+    <id>https://mguludag.github.io/2020/05/22/Github-Pages-Hexo-ile-PWA-ve-Daha-Fazlasi/</id>
+    <published>2020-05-22T19:32:17.000Z</published>
+    <updated>2020-05-24T14:18:42.397Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Daha &amp;#xF6;nce Github Pages &amp;#xFC;zerine Hexo kurulumundan bahsetmi&amp;#x15F;tik. &amp;#x15E;imdi siteye PWA, Push notification, AMP ve TeX render gibi &amp;#xF6;zellikler ekleyece&amp;#x11F;iz.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="Technology" scheme="https://mguludag.github.io/categories/Technology/"/>
+    
+    
+      <category term="Github" scheme="https://mguludag.github.io/tags/Github/"/>
+    
+      <category term="Blog" scheme="https://mguludag.github.io/tags/Blog/"/>
+    
+      <category term="githubpages" scheme="https://mguludag.github.io/tags/githubpages/"/>
+    
+      <category term="Hexo" scheme="https://mguludag.github.io/tags/Hexo/"/>
+    
+      <category term="PWA" scheme="https://mguludag.github.io/tags/PWA/"/>
+    
+      <category term="AMP" scheme="https://mguludag.github.io/tags/AMP/"/>
+    
+      <category term="latex" scheme="https://mguludag.github.io/tags/latex/"/>
+    
+      <category term="math" scheme="https://mguludag.github.io/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github Pages Üzerine Hexo Kurulumu</title>
+    <link href="https://mguludag.github.io/2020/05/21/Github-Pages-Uzerine-Hexo-Kurulumu/"/>
+    <id>https://mguludag.github.io/2020/05/21/Github-Pages-Uzerine-Hexo-Kurulumu/</id>
+    <published>2020-05-21T12:10:25.000Z</published>
+    <updated>2020-05-23T00:53:39.062Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Github Pages ile &lt;code&gt;your-github-username.github.io&lt;/code&gt; &amp;#xFC;zerinde kendi statik sayfam&amp;#x131;z&amp;#x131; yay&amp;#x131;nlayabiliyoruz. &amp;#xC7;e&amp;#x15F;itli geli&amp;#x15F;tiriciler bu sistem &amp;#xFC;zerinde blog in&amp;#x15F;as&amp;#x131; i&amp;#xE7;in &amp;#xE7;e&amp;#x15F;itli &lt;em&gt;static site generator&lt;/em&gt; ara&amp;#xE7;lar&amp;#x131; yay&amp;#x131;nl&amp;#x131;yor. &amp;#x130;&amp;#xE7;lerinde g&amp;#xF6;rd&amp;#xFC;&amp;#x11F;&amp;#xFC;m kadar&amp;#x131;yla &lt;strong&gt;Hexo&lt;/strong&gt; &amp;#xE7;e&amp;#x15F;itli tema ve eklenti deste&amp;#x11F;iyle &amp;#xF6;ne &amp;#xE7;&amp;#x131;k&amp;#x131;yor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="Technology" scheme="https://mguludag.github.io/categories/Technology/"/>
+    
+    
+      <category term="Github" scheme="https://mguludag.github.io/tags/Github/"/>
+    
+      <category term="Blog" scheme="https://mguludag.github.io/tags/Blog/"/>
+    
+      <category term="githubpages" scheme="https://mguludag.github.io/tags/githubpages/"/>
+    
+      <category term="Hexo" scheme="https://mguludag.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenCV DNN ile Daha Iyi Kenar Belirleme</title>
+    <link href="https://mguludag.github.io/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/"/>
+    <id>https://mguludag.github.io/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/</id>
+    <published>2020-05-11T22:26:48.000Z</published>
+    <updated>2020-05-22T18:57:48.617Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;OpenCV ile kenar belirleme i&amp;#xE7;in &amp;#xE7;o&amp;#x11F;unlukla &lt;strong&gt;Canny&lt;/strong&gt; kenar belirleme y&amp;#xF6;ntemi tercih ediliyor. Canny y&amp;#xF6;nteminin yetersiz kald&amp;#x131;&amp;#x11F;&amp;#x131; durumlarda art&amp;#x131;k &lt;strong&gt;dnn&lt;/strong&gt; ile daha ger&amp;#xE7;ek&amp;#xE7;i kenar belirleme sonucu g&amp;#xF6;rece&amp;#x11F;iz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://mguludag.github.io/categories/Programming/"/>
+    
+      <category term="OpenCV" scheme="https://mguludag.github.io/categories/Programming/OpenCV/"/>
+    
+    
+      <category term="cpp" scheme="https://mguludag.github.io/tags/cpp/"/>
+    
+      <category term="opencv" scheme="https://mguludag.github.io/tags/opencv/"/>
+    
+      <category term="edge" scheme="https://mguludag.github.io/tags/edge/"/>
+    
+      <category term="detection" scheme="https://mguludag.github.io/tags/detection/"/>
+    
+      <category term="canny" scheme="https://mguludag.github.io/tags/canny/"/>
+    
+      <category term="dnn" scheme="https://mguludag.github.io/tags/dnn/"/>
+    
+      <category term="deep learning" scheme="https://mguludag.github.io/tags/deep-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cisco Router Yönlendirme</title>
+    <link href="https://mguludag.github.io/2020/03/09/cisco_router_routing/"/>
+    <id>https://mguludag.github.io/2020/03/09/cisco_router_routing/</id>
+    <published>2020-03-09T17:13:43.000Z</published>
+    <updated>2020-05-22T12:26:01.575Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;A&amp;#x11F;da paketlerin do&amp;#x11F;ru a&amp;#x11F;daki al&amp;#x131;c&amp;#x131;lara teslim edilmesi i&amp;#xE7;in y&amp;#xF6;nlendiriciler taraf&amp;#x131;ndan yap&amp;#x131;lan i&amp;#x15F;lem.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="Network" scheme="https://mguludag.github.io/categories/Network/"/>
+    
+      <category term="Technology" scheme="https://mguludag.github.io/categories/Network/Technology/"/>
+    
+    
+      <category term="cisco" scheme="https://mguludag.github.io/tags/cisco/"/>
+    
+      <category term="router" scheme="https://mguludag.github.io/tags/router/"/>
+    
+      <category term="yönlendirme" scheme="https://mguludag.github.io/tags/yonlendirme/"/>
+    
+      <category term="network" scheme="https://mguludag.github.io/tags/network/"/>
+    
+      <category term="routing" scheme="https://mguludag.github.io/tags/routing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C Stili Dizilerden std::array&#39;e...</title>
+    <link href="https://mguludag.github.io/2019/11/17/C-Stili-Dizilerden-std-array-e/"/>
+    <id>https://mguludag.github.io/2019/11/17/C-Stili-Dizilerden-std-array-e/</id>
+    <published>2019-11-17T20:08:36.000Z</published>
+    <updated>2020-05-22T10:48:19.202Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Programlama dillerinde diziler uygulan&amp;#x131;rken syntax olarak genelde C stili dizilerden ilham ald&amp;#x131;lar. &amp;#xD6;zellik olarak C stili dizilerin &amp;#xFC;zerine ihtiyaca g&amp;#xF6;re &amp;#xFC;ye fonksiyonlar da eklendi.&lt;/p&gt;
+&lt;p&gt;C++11 ile gelen &lt;code&gt;std::array&lt;/code&gt; ile C stili dizilerden &amp;#xE7;ok daha fazla kullan&amp;#x131;&amp;#x15F;l&amp;#x131;l&amp;#x131;&amp;#x11F;a ve okunabilirli&amp;#x11F;e sahip kod yaz&amp;#x131;l&amp;#x131;rken performans anlam&amp;#x131;nda ise neredeyse ayn&amp;#x131; seviyede say&amp;#x131;l&amp;#x131;r.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="Programming" scheme="https://mguludag.github.io/categories/Programming/"/>
+    
+      <category term="CPP" scheme="https://mguludag.github.io/categories/Programming/CPP/"/>
+    
+    
+      <category term="dizi" scheme="https://mguludag.github.io/tags/dizi/"/>
+    
+      <category term="programlama" scheme="https://mguludag.github.io/tags/programlama/"/>
+    
+      <category term="c++" scheme="https://mguludag.github.io/tags/c/"/>
+    
+      <category term="cpp" scheme="https://mguludag.github.io/tags/cpp/"/>
+    
+      <category term="c" scheme="https://mguludag.github.io/tags/c/"/>
+    
+      <category term="array" scheme="https://mguludag.github.io/tags/array/"/>
+    
+      <category term="std::array" scheme="https://mguludag.github.io/tags/std-array/"/>
+    
+  </entry>
+  
+</feed>
