@@ -32,9 +32,9 @@ var precacheUrls = [];
 
   precacheUrls.push('/2020/05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/');
 
-  precacheUrls.push('/2020/07/16/cpp-vector-e-bakis/');
-
   precacheUrls.push('/2020/03/09/cisco_router_routing/');
+
+  precacheUrls.push('/2020/07/16/cpp-vector-e-bakis/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};

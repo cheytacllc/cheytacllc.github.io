@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <link rel=manifest href=/manifest.json>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="blog mguludag">
+<meta name="msapplication-TileImage" content="https://mguludag.github.io/images/applogo.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta charset="utf-8">
+<title>C Stili Dizilerden std::array&#39;e... - C++ Qt and OpenCV Articles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+<meta name="google-site-verification" content="QlAZxkiGKxdA2w9rcbI3ViB5_5aGBRQgoT-3G0oFcl0" />
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+    <meta name="description" content="Programlama dillerinde diziler uygulan&amp;#x131;rken syntax olarak genelde C stili dizilerden ilham ald&amp;#x131;lar. &amp;#xD6;zellik olarak C stili dizilerin &amp;#xFC;zerine ihtiyaca g&amp;#xF6;re &amp;#xFC;ye fonksiyon">
+<meta name="keywords" content="dizi,programlama,c++,cpp,c,array,std::array">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C Stili Dizilerden std::array&#39;e...">
+<meta property="og:url" content="https://mguludag.github.io/2019/11/17/C-Stili-Dizilerden-std-array-e/index.html">
+<meta property="og:site_name" content="C++ Qt and OpenCV Articles">
+<meta property="og:description" content="Programlama dillerinde diziler uygulan&amp;#x131;rken syntax olarak genelde C stili dizilerden ilham ald&amp;#x131;lar. &amp;#xD6;zellik olarak C stili dizilerin &amp;#xFC;zerine ihtiyaca g&amp;#xF6;re &amp;#xFC;ye fonksiyon">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-05-22T10:48:19.202Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@mguludag">
+<meta name="twitter:site" content="twitter.com">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+
+    <link rel="amphtml" href="https://mguludag.github.io/2019/11/17/C-Stili-Dizilerden-std-array-e//amp/index.html">
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="../../../../css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="../../../../index.html">
+                
+                    
+                    M. Galib Uludag
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="../../../../archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="../../../../categories/Programming/CPP">C++</a>
+            
+            <a class="navbar-item "
+               href="../../../../categories/Programming/Qt">Qt</a>
+            
+            <a class="navbar-item "
+               href="../../../../categories/Programming/OpenCV">OpenCV</a>
+            
+            <a class="navbar-item "
+               href="../../../../categories/Network">Network</a>
+            
+            <a class="navbar-item "
+               href="../../../../categories/Technology">Technology</a>
+            
+            <a class="navbar-item "
+               href="../../../../about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;" target="_blank" rel="noopener">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/mguludag" target="_blank" rel="noopener">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="LinkedIn" href="https://linkedin.com/in/mguludag" target="_blank" rel="noopener">
+                
+                <i class="fab fa-linkedin"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="Twitter" href="https://twitter.com/mguludag" target="_blank" rel="noopener">
+                
+                <i class="fab fa-twitter-square"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            C Stili Dizilerden std::array&#39;e...
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-11-17T20:08:36.000Z" itemprop="datePublished">Nov 17 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="../../../../categories/Programming/">Programming</a><span>></span><a class="article-category-link" href="../../../../categories/Programming/CPP/">CPP</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            5 minutes read (About 817 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 4.0.0"></head><body><p>Programlama dillerinde diziler uygulan&#x131;rken syntax olarak genelde C stili dizilerden ilham ald&#x131;lar. &#xD6;zellik olarak C stili dizilerin &#xFC;zerine ihtiyaca g&#xF6;re &#xFC;ye fonksiyonlar da eklendi.</p>
+<p>C++11 ile gelen <code>std::array</code> ile C stili dizilerden &#xE7;ok daha fazla kullan&#x131;&#x15F;l&#x131;l&#x131;&#x11F;a ve okunabilirli&#x11F;e sahip kod yaz&#x131;l&#x131;rken performans anlam&#x131;nda ise neredeyse ayn&#x131; seviyede say&#x131;l&#x131;r.</p>
+<a id="more"></a>
+
+<p><code>std::array</code> C stili diziler gibi statik boyutludur ve bellekte derleme zaman&#x131;nda yer ayr&#x131;l&#x131;r.</p>
+<h2 id="std-array&#x2019;-e-genel-bakis"><a href="#std-array&#x2019;-e-genel-bakis" class="headerlink" title="std::array&#x2019; e genel bak&#x131;&#x15F;"></a>std::array&#x2019; e genel bak&#x131;&#x15F;</h2><p><code>std::array</code> arka planda C stili dizinin ve ilgili &#xFC;ye fonksiyonlar&#x131;n&#x131;n bulundu&#x11F;u array s&#x131;n&#x131;f &#x15F;ablonu yap&#x131;s&#x131;ndad&#x131;r.</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T, <span class="hljs-keyword">size_t</span> N&gt;</span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">array</span></span></span><br><span class="line"><span class="hljs-class">{</span></span><br><span class="line"><span class="hljs-keyword">public</span>:</span><br><span class="line">    T _data[N];</span><br><span class="line">    T&amp; <span class="hljs-keyword">operator</span>[](<span class="hljs-keyword">size_t</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> T&amp; <span class="hljs-keyword">operator</span>[](<span class="hljs-keyword">size_t</span>) <span class="hljs-keyword">const</span>;</span><br><span class="line">    <span class="hljs-comment">// other member functions and typedefs</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><code>std::array</code> kullanmak i&#xE7;in <code>#include &lt;array&gt;</code> ile array k&#xFC;t&#xFC;phanesi projeye eklenir. <code>std::array</code> uzunlu&#x11F;u derleme zaman&#x131;nda hesapland&#x131;&#x11F;&#x131;ndan ve o bilgi olu&#x15F;turulan nesne i&#xE7;erisindeki bir de&#x11F;i&#x15F;kende sakland&#x131;&#x11F;&#x131;ndan sonradan o <code>std::array</code> nesnesinin uzunlu&#x11F;unu &#xF6;&#x11F;renmek kolay ve h&#x131;zl&#x131;d&#x131;r.</p>
+<h2 id="std-array-olusturmak"><a href="#std-array-olusturmak" class="headerlink" title="std::array olu&#x15F;turmak"></a>std::array olu&#x15F;turmak</h2><p><code>std::array</code> iki bile&#x15F;enden olu&#x15F;ur: &#x130;lki array i&#xE7;inde saklanacak elemanlar&#x131;n tipi ve ikincisi array nesnesinin ne kadar eleman tutaca&#x11F;&#x131; (yani uzunlu&#x11F;u).</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//a1 dizisi 10 int tipinde eleman tutar</span></span><br><span class="line"><span class="hljs-built_in">std</span>::<span class="hljs-built_in">array</span>&lt;<span class="hljs-keyword">int</span>, 10&gt; a1;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//Tan&#x131;mlama s&#x131;ras&#x131;nda de&#x11F;erler atanabilir</span></span><br><span class="line"><span class="hljs-built_in">std</span>::<span class="hljs-built_in">array</span>&lt;<span class="hljs-keyword">int</span>, 5&gt; a2 = {<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>};</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>Ayr&#x131;ca mevcut diziler yeni dizilere atama yoluyla kopyalanabilir.</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//atama yoluyla yeni kopya dizi olu&#x15F;turma</span></span><br><span class="line"><span class="hljs-keyword">auto</span> a3 = a2;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//constructor ile de kopya dizi olu&#x15F;turulabilir</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">a4</span><span class="hljs-params">(a2)</span></span>;</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>Ayn&#x131; uzunluktaki ba&#x15F;ka bir dolu diziye <code>=</code> operat&#xF6;r&#xFC; ile atama yap&#x131;labilir ama uzunluklar ayn&#x131; olmad&#x131;&#x11F;&#x131;nda hata al&#x131;nacakt&#x131;r.</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//a3 dizisi de&#x11F;erlerini a2 dizisine atama</span></span><br><span class="line">a2 = a3;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// &apos;=&apos; operat&#xF6;r&#xFC; iki dizi ayn&#x131; boyutta ise kullan&#x131;labilir.</span></span><br><span class="line"><span class="hljs-comment">//Hata:</span></span><br><span class="line"><span class="hljs-comment">//a1 = a2; //&lt;[...],10&gt; vs &lt;[...],5&gt;! ge&#xE7;ersiz</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="std-array-icindeki-verilere-erismek"><a href="#std-array-icindeki-verilere-erismek" class="headerlink" title="std::array i&#xE7;indeki verilere eri&#x15F;mek"></a>std::array i&#xE7;indeki verilere eri&#x15F;mek</h2><p><code>std::array</code> i&#xE7;indeki verilere dizilerden al&#x131;&#x15F;t&#x131;&#x11F;&#x131;m&#x131;z &#x15F;ekilde <code>[]</code> operat&#xF6;r&#xFC; ile de eri&#x15F;ebiliriz ama s&#x131;n&#x131;r kontrol&#xFC; yapmad&#x131;&#x11F;&#x131;ndan dizi boyutundan farkl&#x131; de&#x11F;erlerde hata al&#x131;nacakt&#x131;r.</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//beklenilen &#x15F;ekilde de&#x11F;er atamalar&#x131; ger&#xE7;ekle&#x15F;ir</span></span><br><span class="line">a3[<span class="hljs-number">0</span>] = <span class="hljs-number">-2</span>;</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>S&#x131;n&#x131;r kontrol&#xFC; i&#xE7;in <code>at()</code> &#xFC;ye fonksiyonu kullan&#x131;labilir.</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;a2.at(4): &quot;</span> &lt;&lt; a2.at(<span class="hljs-number">4</span>) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// S&#x131;n&#x131;r kontrol&#xFC; istisna yaratabilir. Deneyin:</span></span><br><span class="line"><span class="hljs-comment">//auto b = a2.at(10);</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>Ayr&#x131;ca <code>front()</code> ve <code>back()</code> &#xFC;ye fonksiyonlar&#x131;yla array nesnesindeki ilk ve son de&#x11F;erlere eri&#x15F;ebiliriz.</p>
+<h2 id="data-uye-fonksiyonu"><a href="#data-uye-fonksiyonu" class="headerlink" title="data() &#xFC;ye fonksiyonu"></a>data() &#xFC;ye fonksiyonu</h2><p><code>std::array</code> dolayl&#x131; yoldan raw pointera d&#xF6;n&#xFC;&#x15F;mez. Pointer temelli kullanmak isteniyorsa <code>data()</code> &#xFC;ye fonksiyonu kullanmak gerekir.<br>&#xD6;rne&#x11F;in buffer aray&#xFC;z&#xFC; i&#xE7;in C stili API yazal&#x131;m:</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">carr_func</span><span class="hljs-params">(<span class="hljs-keyword">int</span> * arr, <span class="hljs-keyword">size_t</span> <span class="hljs-built_in">size</span>)</span></span></span><br><span class="line"><span class="hljs-function"></span>{</span><br><span class="line">    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;carr_func - arr: &quot;</span> &lt;&lt; arr &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><code>carr_func</code> fonksiyonunda ilk parametreye <code>std::array</code> g&#xF6;nderirsek derleyici hatas&#x131; olu&#x15F;ur.</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">../../array.cpp:44:2: error: no matching function for call to &apos;carr_func&apos;</span><br><span class="line">        carr_func(a2);</span><br><span class="line">        ^~~~~~~~~</span><br><span class="line">../../<span class="hljs-built_in">array</span>.cpp:<span class="hljs-number">4</span>:<span class="hljs-number">6</span>: note: candidate function <span class="hljs-keyword">not</span> viable: no known conversion</span><br><span class="line">      from &apos;std::array&lt;int, 5&gt;&apos; to &apos;int *&apos; for 1st argument</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">carr_func</span><span class="hljs-params">(<span class="hljs-keyword">int</span> * arr)</span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>Bunun yerine <code>data()</code> &#xFC;ye fonksiyonunu kullan&#x131;nca sorun &#xE7;&#xF6;z&#xFC;l&#xFC;r.</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//Error:</span></span><br><span class="line"><span class="hljs-comment">//carr_func(a2, a2.size());</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//OK:</span></span><br><span class="line">carr_func(a2.data(), a2.<span class="hljs-built_in">size</span>());</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="size-ve-empty-uye-fonksiyonlari"><a href="#size-ve-empty-uye-fonksiyonlari" class="headerlink" title="size() ve empty() &#xFC;ye fonksiyonlar&#x131;"></a>size() ve empty() &#xFC;ye fonksiyonlar&#x131;</h2><p><code>size()</code> &#xFC;ye fonksiyonuyla dizinin uzunlu&#x11F;u &#xF6;&#x11F;renilebilir. <code>empty()</code> &#xFC;ye fonksiyonu ise dizinin i&#xE7;eri&#x11F;i bo&#x15F; ise <code>true</code>, dolu ise <code>false</code> d&#xF6;nd&#xFC;r&#xFC;r.</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a2.<span class="hljs-built_in">size</span>(); <span class="hljs-comment">//5</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">std</span>::<span class="hljs-built_in">array</span>&lt;<span class="hljs-keyword">int</span>, 0&gt; a_empty;</span><br><span class="line">a_empty.empty(); <span class="hljs-comment">//true</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="Container-kap-islemleri"><a href="#Container-kap-islemleri" class="headerlink" title="Container(kap) i&#x15F;lemleri"></a>Container(kap) i&#x15F;lemleri</h2><p><code>std::array</code> container s&#x131;n&#x131;f&#x131; oldu&#x11F;undan temel container aray&#xFC;zlerini sunmaktad&#x131;r. <code>std::array</code> statik uzunlukta oldu&#x11F;undan dinamik olarak uzunluk de&#x11F;i&#x15F;tirme gibi i&#x15F;lemler mevcut de&#x11F;ildir. Ancak <code>std::sort</code> gibi s&#x131;ralama fonksiyonlar&#x131; kullan&#x131;labilir.</p>
+<p></p><figure class="highlight c++ hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">std</span>::sort(a1.<span class="hljs-built_in">begin</span>(), a1.<span class="hljs-built_in">end</span>());</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h1 id="Ileri-okuma-ve-kaynaklar"><a href="#Ileri-okuma-ve-kaynaklar" class="headerlink" title="&#x130;leri okuma ve kaynaklar"></a>&#x130;leri okuma ve kaynaklar</h1><ul>
+<li><a href="http://en.cppreference.com/w/cpp/container/array" target="_blank" rel="noopener">cppreference: std::array</a></li>
+<li>Makaleler/A&#xE7;&#x131;klamalar<ul>
+<li><a href="https://embeddedartistry.com/blog/2017/06/28/an-introduction-to-stdarray/" target="_blank" rel="noopener">An Introduction to std::array</a></li>
+<li><a href="http://cpluspluslearning-petert.blogspot.com/2015/01/c11-features-stdarray.html" target="_blank" rel="noopener">C++11 Features &#x2013; std::array</a></li>
+<li><a href="http://www.devx.com/cplus/Article/42114" target="_blank" rel="noopener">std::array: The Secure, Convenient Option for Fixed-size Sequences</a></li>
+</ul>
+</li>
+</ul>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1596468111577')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script></body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/dizi/">#dizi</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/programlama/">#programlama</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/c/">#c++</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/cpp/">#cpp</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/c/">#c</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/array/">#array</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/std-array/">#std::array</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="../../../../2020/03/09/cisco_router_routing/">Cisco Router Yönlendirme</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-next">
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5dc4b556ab6ded0012c014ec&amp;product=inline-share-buttons' async='async'></script>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://mguludag.github.io/2019/11/17/C-Stili-Dizilerden-std-array-e/';
+        this.page.identifier = '2019/11/17/C-Stili-Dizilerden-std-array-e/';
+        
+        this.language = 'en';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'cheytacllcgithubio' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2020 Muhammed Galib Uludag&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/mguludag" target="_blank" rel="noopener">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+<script src="../../../../js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '../../../../content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="../../../../js/insight.js"></script>
+    
+</body>
+</html>

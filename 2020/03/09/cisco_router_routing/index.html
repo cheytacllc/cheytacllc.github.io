@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <link rel=manifest href=/manifest.json>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="blog mguludag">
+<meta name="msapplication-TileImage" content="https://mguludag.github.io/images/applogo.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta charset="utf-8">
+<title>Cisco Router Yönlendirme - C++ Qt and OpenCV Articles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+<meta name="google-site-verification" content="QlAZxkiGKxdA2w9rcbI3ViB5_5aGBRQgoT-3G0oFcl0" />
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+    <meta name="description" content="A&amp;#x11F;da paketlerin do&amp;#x11F;ru a&amp;#x11F;daki al&amp;#x131;c&amp;#x131;lara teslim edilmesi i&amp;#xE7;in y&amp;#xF6;nlendiriciler taraf&amp;#x131;ndan yap&amp;#x131;lan i&amp;#x15F;lem.">
+<meta name="keywords" content="cisco,router,yönlendirme,network,routing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cisco Router Yönlendirme">
+<meta property="og:url" content="https://mguludag.github.io/2020/03/09/cisco_router_routing/index.html">
+<meta property="og:site_name" content="C++ Qt and OpenCV Articles">
+<meta property="og:description" content="A&amp;#x11F;da paketlerin do&amp;#x11F;ru a&amp;#x11F;daki al&amp;#x131;c&amp;#x131;lara teslim edilmesi i&amp;#xE7;in y&amp;#xF6;nlendiriciler taraf&amp;#x131;ndan yap&amp;#x131;lan i&amp;#x15F;lem.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://mguludag.github.io/2020/03/09/cisco_router_routing/router.png">
+<meta property="og:updated_time" content="2020-05-22T12:26:01.575Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mguludag.github.io/2020/03/09/cisco_router_routing/router.png">
+<meta name="twitter:creator" content="@mguludag">
+<meta name="twitter:site" content="twitter.com">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+
+    <link rel="amphtml" href="https://mguludag.github.io/2020/03/09/cisco_router_routing//amp/index.html">
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="../../../../css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="../../../../index.html">
+                
+                    
+                    M. Galib Uludag
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="../../../../archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="../../../../categories/Programming/CPP">C++</a>
+            
+            <a class="navbar-item "
+               href="../../../../categories/Programming/Qt">Qt</a>
+            
+            <a class="navbar-item "
+               href="../../../../categories/Programming/OpenCV">OpenCV</a>
+            
+            <a class="navbar-item "
+               href="../../../../categories/Network">Network</a>
+            
+            <a class="navbar-item "
+               href="../../../../categories/Technology">Technology</a>
+            
+            <a class="navbar-item "
+               href="../../../../about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;" target="_blank" rel="noopener">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/mguludag" target="_blank" rel="noopener">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="LinkedIn" href="https://linkedin.com/in/mguludag" target="_blank" rel="noopener">
+                
+                <i class="fab fa-linkedin"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="Twitter" href="https://twitter.com/mguludag" target="_blank" rel="noopener">
+                
+                <i class="fab fa-twitter-square"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Cisco Router Yönlendirme
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2020-03-09T17:13:43.000Z" itemprop="datePublished">Mar 9 2020</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="../../../../categories/Network/">Network</a><span>></span><a class="article-category-link" href="../../../../categories/Network/Technology/">Technology</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 476 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 4.0.0"></head><body><p>A&#x11F;da paketlerin do&#x11F;ru a&#x11F;daki al&#x131;c&#x131;lara teslim edilmesi i&#xE7;in y&#xF6;nlendiriciler taraf&#x131;ndan yap&#x131;lan i&#x15F;lem.</p>
+<a id="more"></a>
+
+<ul>
+<li><p>Y&#xF6;nlendirici, y&#xF6;nlendirmek &#xFC;zere ald&#x131;&#x11F;&#x131; paketin IP ba&#x15F;l&#x131;&#x11F;&#x131;ndaki hedef a&#x11F; adresi <em>(destination IP Address)</em> alan&#x131;n&#x131; kullanarak y&#xF6;nlendirme karar&#x131; verir.</p>
+</li>
+<li><p>Y&#xF6;nlendirici, karar&#x131; i&#xE7;in belle&#x11F;inde bulunan y&#xF6;nlendirme tablosunu <em>(routing table)</em> kullan&#x131;r.</p>
+</li>
+<li><p>Y&#xF6;nlendirme tablosu &#xFC;&#xE7; s&#xFC;tundan olu&#x15F;ur;</p>
+<ul>
+<li>Hedef a&#x11F; adresi/Hedef a&#x11F; alt a&#x11F; maskesi</li>
+<li>Hedef y&#xF6;n&#xFC;ndeki kom&#x15F;u y&#xF6;nlendirici adresi</li>
+<li>Hedefe ula&#x15F;ma maliyeti <em>(metric)</em></li>
+</ul>
+</li>
+<li><p>Y&#xF6;nlendirme tablosunun sat&#x131;rlar&#x131; <em>(rotalar)</em> &#xFC;&#xE7; y&#xF6;ntemle olu&#x15F;turulabilir:</p>
+<ul>
+<li><strong>Do&#x11F;rudan ba&#x11F;l&#x131; a&#x11F;:</strong> Y&#xF6;nlendirici a&#x11F; aray&#xFC;z&#xFC; vas&#x131;tas&#x131;yla ba&#x11F;l&#x131; bulunan a&#x11F;lar y&#xF6;nlendirme tablosuna otomatik olarak eklenir.</li>
+<li><strong>Statik yollar:</strong> A&#x11F; y&#xF6;neticisinin do&#x11F;rudan ba&#x11F;l&#x131; a&#x11F;lar d&#x131;&#x15F;&#x131;ndaki a&#x11F;lar&#x131; <em>(uzak a&#x11F;lar)</em> elle y&#xF6;nlendirme komutu yazarak olu&#x15F;turdu&#x11F;u yollar.</li>
+<li><strong>Dinamik yollar:</strong> Dinamik y&#xF6;nlendirme protokolleriyle uzak a&#x11F;lar&#x131;n dinamik olarak tabloya eklenmesi.</li>
+</ul>
+</li>
+<li><p>Y&#xF6;nlendirici ald&#x131;&#x11F;&#x131; bir paket i&#xE7;in;</p>
+<ul>
+<li>Do&#x11F;rudan ba&#x11F;l&#x131; a&#x11F;lardaki bir al&#x131;c&#x131;ya aitse al&#x131;c&#x131;s&#x131;na teslim eder.</li>
+<li>Uzak a&#x11F;lardaki bir al&#x131;c&#x131;ya aitse y&#xF6;nlendirme tablosundaki yollardan e&#x15F;le&#x15F;me bulunan sonraki y&#xF6;nlendiriciye teslim eder.</li>
+<li>Rotalarla e&#x15F;le&#x15F;me bulunamazsa siler.</li>
+</ul>
+</li>
+<li><p>Y&#xF6;nlendirici ald&#x131;&#x11F;&#x131; paketin hedef IP adresi alan&#x131; ile y&#xF6;nlendirme tablosundaki hedef a&#x11F;lar&#x131; e&#x15F;le&#x15F;tirirken, hedef a&#x11F; adreslerini &#xF6;zelden genele do&#x11F;ru s&#x131;ralar.</p>
+</li>
+<li><p>E&#x15F;le&#x15F;me kontrol&#xFC;, paket ba&#x15F;l&#x131;&#x11F;&#x131;ndaki hedef alt a&#x11F; maskesi AND&#x2019;lenip hedef a&#x11F;&#x131; elde edebilmek i&#xE7;in yap&#x131;l&#x131;r.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Hedef A&#x11F; Ad&#x131;/Alt A&#x11F; Maskesi</th>
+<th>Sonraki Router Ad&#x131;</th>
+<th>Metrik</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1 &#x2192; 192.168.1.0/24</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5 &#x2192; 10.0.0.0/8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3 &#x2192; 172.16.0.0/16</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4 &#x2192; 10.0.0.0/16</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2 &#x2192; 95.183.162.0/24</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Ornek"><a href="#Ornek" class="headerlink" title="&#xD6;rnek"></a>&#xD6;rnek</h3><p><img src="./router.png" alt="Example network"></p>
+<h4 id="Router-A"><a href="#Router-A" class="headerlink" title="Router A"></a>Router A</h4><table>
+<thead>
+<tr>
+<th>Hedef A&#x11F; Adresi/Alt A&#x11F; Maskesi</th>
+<th>Sonraki Router Ad&#x131;</th>
+<th>Metrik</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>192.168.1.0/24</em></td>
+<td><em>fa0/0</em></td>
+<td><em>0</em></td>
+</tr>
+<tr>
+<td><em>192.168.4.4/30</em></td>
+<td><em>fa0/1</em></td>
+<td><em>0</em></td>
+</tr>
+<tr>
+<td><em>192.168.4.0/30</em></td>
+<td><em>e0</em></td>
+<td><em>0</em></td>
+</tr>
+<tr>
+<td>192.168.2.0/24</td>
+<td>192.168.4.6</td>
+<td>1</td>
+</tr>
+<tr>
+<td>192.168.3.0/24</td>
+<td>192.168.4.2</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h4 id="Router-B"><a href="#Router-B" class="headerlink" title="Router B"></a>Router B</h4><table>
+<thead>
+<tr>
+<th>Hedef A&#x11F; Adresi/Alt A&#x11F; Maskesi</th>
+<th>Sonraki Router Ad&#x131;</th>
+<th>Metrik</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>192.168.3.0/24</em></td>
+<td><em>fa0/0</em></td>
+<td><em>0</em></td>
+</tr>
+<tr>
+<td><em>192.168.4.0/30</em></td>
+<td><em>fa0/1</em></td>
+<td><em>0</em></td>
+</tr>
+<tr>
+<td>192.168.1.0/24</td>
+<td>192.168.4.1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>192.168.2.0/24</td>
+<td>192.168.4.1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>192.168.4.4/30</td>
+<td>192.168.4.1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h4 id="Router-C"><a href="#Router-C" class="headerlink" title="Router C"></a>Router C</h4><table>
+<thead>
+<tr>
+<th>Hedef A&#x11F; Adresi/Alt A&#x11F; Maskesi</th>
+<th>Sonraki Router Ad&#x131;</th>
+<th>Metrik</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>192.168.2.0/24</em></td>
+<td><em>fa0/0</em></td>
+<td><em>0</em></td>
+</tr>
+<tr>
+<td><em>192.168.4.4/30</em></td>
+<td><em>fa0/1</em></td>
+<td><em>0</em></td>
+</tr>
+<tr>
+<td>192.168.1.0/24</td>
+<td>192.168.4.5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>192.168.3.0/24</td>
+<td>192.168.4.5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>192.168.4.0/30</td>
+<td>192.168.4.5</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><em>&#x130;talik &#x15F;ekildeki</em> yap&#x131;land&#x131;rmalar Router taraf&#x131;ndan otomatik yap&#x131;lmaktad&#x131;r.</p>
+</blockquote>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">R(config)#ip route hedef_a&#x11F;_adresi hedef_alt_a&#x11F;_maskesi sonraki_router_adresi [metrik]</span><br></pre></td></tr></tbody></table></figure><p></p>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1596468111577')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BA7hEvArqyX3wwISNRJJDAXqIr6EHpJKRxBqPwBoilhi4w78QV8EvZJhmXDQS3WCGED-daFwlf2S6enen9Lo3zw');</script></body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/cisco/">#cisco</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/router/">#router</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/yonlendirme/">#yönlendirme</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/network/">#network</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="../../../../tags/routing/">#routing</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="../../../05/12/OpenCV-DNN-ile-Daha-Iyi-Kenar-Belirleme/">OpenCV DNN ile Daha Iyi Kenar Belirleme</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="../../../../2019/11/17/C-Stili-Dizilerden-std-array-e/">C Stili Dizilerden std::array&#39;e...</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5dc4b556ab6ded0012c014ec&amp;product=inline-share-buttons' async='async'></script>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://mguludag.github.io/2020/03/09/cisco_router_routing/';
+        this.page.identifier = '2020/03/09/cisco_router_routing/';
+        
+        this.language = 'en';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'cheytacllcgithubio' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2020 Muhammed Galib Uludag&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/mguludag" target="_blank" rel="noopener">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+<script src="../../../../js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '../../../../content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="../../../../js/insight.js"></script>
+    
+</body>
+</html>
